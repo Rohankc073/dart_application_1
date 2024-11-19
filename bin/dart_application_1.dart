@@ -1,5 +1,12 @@
-import 'package:dart_application_1/dart_application_1.dart' as dart_application_1;
+void main(){
+  
+  print(calSimp(10000, 10, 2));
+}
 
-void main(List<String> arguments) {
-  print('Hello world: ${dart_application_1.calculate()}!');
+double calSimp(double principle,
+  double rate,
+  int time){
+return ((principle*rate*time)/100);
+
+
 }
