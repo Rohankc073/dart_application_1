@@ -48,20 +48,51 @@
 // }
 
 //Inheritance means a class can inherit properties and methods from another class
-class Animal {
-  void eat() {
-    print("Animals eats food.");
+// class Animal {
+//   void eat() {
+//     print("Animals eats food.");
+//   }
+// }
+
+// class Dog extends Animal {
+//   void bark() {
+//     print("The dog barks.");
+//   }
+// }
+
+// void main() {
+//   Dog myDog = Dog();
+//   myDog.eat(); // Inherited from Animal class
+//   myDog.bark(); // Defined in Dog class
+// }
+
+//Polymorphism means many forms. It allows one function to act differently
+class Shape {
+  void draw() {
+    print("Drawing a shape.");
   }
 }
 
-class Dog extends Animal {
-  void bark() {
-    print("The dog barks.");
+class Circle extends Shape {
+  @override
+  void draw() {
+    print("Drawing a circle.");
+  }
+}
+
+class Rectangle extends Shape {
+  @override
+  void draw() {
+    print("Drawing a rectangle.");
   }
 }
 
 void main() {
-  Dog myDog = Dog();
-  myDog.eat(); // Inherited from Animal class
-  myDog.bark(); // Defined in Dog class
+  Shape myShape = Shape();
+  Shape myCircle = Circle();
+  Shape myRectangle = Rectangle();
+
+  myShape.draw();
+  myCircle.draw();
+  myRectangle.draw();
 }
