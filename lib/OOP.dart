@@ -25,24 +25,43 @@
 
 //Encapsulation : Hide the internal data of an object and only show what is necessary
 
-class BankAccount {
-  double _balance = 0;
+// class BankAccount {
+//   double _balance = 0;
 
-  //Method to deposit money
-  void deposit(double amount) {
-    if (amount > 0) {
-      _balance = _balance + amount;
-    }
+//   //Method to deposit money
+//   void deposit(double amount) {
+//     if (amount > 0) {
+//       _balance = _balance + amount;
+//     }
+//   }
+
+//   //Method to check balance
+//   double getbalance() {
+//     return _balance;
+//   }
+// }
+
+// void main() {
+//   BankAccount myAccount = BankAccount();
+//   myAccount.deposit(500);
+//   print("Balance: ${myAccount.getbalance()} ");
+// }
+
+//Inheritance means a class can inherit properties and methods from another class
+class Animal {
+  void eat() {
+    print("Animals eats food.");
   }
+}
 
-  //Method to check balance
-  double getbalance() {
-    return _balance;
+class Dog extends Animal {
+  void bark() {
+    print("The dog barks.");
   }
 }
 
 void main() {
-  BankAccount myAccount = BankAccount();
-  myAccount.deposit(500);
-  print("Balance: ${myAccount.getbalance()} ");
+  Dog myDog = Dog();
+  myDog.eat(); // Inherited from Animal class
+  myDog.bark(); // Defined in Dog class
 }
