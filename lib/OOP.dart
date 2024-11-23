@@ -67,32 +67,59 @@
 // }
 
 //Polymorphism means many forms. It allows one function to act differently
-class Shape {
-  void draw() {
-    print("Drawing a shape.");
+// class Shape {
+//   void draw() {
+//     print("Drawing a shape.");
+//   }
+// }
+
+// class Circle extends Shape {
+//   @override
+//   void draw() {
+//     print("Drawing a circle.");
+//   }
+// }
+
+// class Rectangle extends Shape {
+//   @override
+//   void draw() {
+//     print("Drawing a rectangle.");
+//   }
+// }
+
+// void main() {
+//   Shape myShape = Shape();
+//   Shape myCircle = Circle();
+//   Shape myRectangle = Rectangle();
+
+//   myShape.draw();
+//   myCircle.draw();
+//   myRectangle.draw();
+// }
+
+//Abstraction : It hides unecessary data from the users and only show the ones that are needed
+abstract class Vehicle {
+  void start();
+}
+
+class Car extends Vehicle {
+  @override
+  void start() {
+    print("Car starts with a key.");
   }
 }
 
-class Circle extends Shape {
+class Bike extends Vehicle {
   @override
-  void draw() {
-    print("Drawing a circle.");
-  }
-}
-
-class Rectangle extends Shape {
-  @override
-  void draw() {
-    print("Drawing a rectangle.");
+  void start() {
+    print("Bike starts with a button.");
   }
 }
 
 void main() {
-  Shape myShape = Shape();
-  Shape myCircle = Circle();
-  Shape myRectangle = Rectangle();
+  Vehicle myCar = Car();
+  Vehicle myBike = Bike();
 
-  myShape.draw();
-  myCircle.draw();
-  myRectangle.draw();
+  myCar.start();
+  myBike.start();
 }
