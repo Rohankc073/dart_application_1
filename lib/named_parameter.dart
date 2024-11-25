@@ -3,8 +3,8 @@ void main() {
 }
 
 int add({
-  required int first, // Must provide a value when calling.
-  required int second, // Must provide a value when calling.
+  required int? first, // Must provide a value when calling.
+  required int? second, // Must provide a value when calling.
   int? saru, // Optional, can be null.
   int? adarsh, // Optional, can be null.
 }) {
