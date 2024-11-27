@@ -1,5 +1,5 @@
 void main() {
-  Map cityCountry = Map<String, String>();
+  Map cityCountry = <String, String>{};
   cityCountry['New York'] = "USA";
   cityCountry["London"] = "UK";
   cityCountry["Paris"] = "France";
